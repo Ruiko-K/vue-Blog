@@ -1,6 +1,6 @@
 <template>
 
-    <article>
+    <article class='post'>
         <h1>第{{ $route.query.count }}篇{{$route.params.type}}测试文章</h1>
         <aside>
             <span>标签1</span>
@@ -23,7 +23,9 @@ export default {
 </script>
 
 <style>
-
+.post {
+  margin-top: 2em;
+}
 </style>
 
 
