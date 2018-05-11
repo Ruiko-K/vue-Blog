@@ -16,7 +16,9 @@
         <router-link to="/photo">相册</router-link>
       </nav>
     </div>
-    <div @click="showRecommend()">不定期推荐~</div>
+    <div id="recommend-in" @click="showRecommend()">
+      <h5>不定期推荐~</h5>
+    </div>
     <transition name="fade">
       <div id='recommend' v-if="recommendFlg" @mousedown="startP($event)" @mousemove="moveP($event)" @mouseup="stopP()" @mouseout="stopP()">不定期推荐</div>
     </transition>
@@ -71,6 +73,11 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: Cambria, Georgia, "Microsoft Jhenghei", "Hiragino Sans GB",
+    "Microsoft YaHei", "Times New Roman", serif;
+}
+
 a {
   text-decoration: unset;
 }
@@ -117,6 +124,19 @@ a {
   position: absolute;
   top: 0px;
   opacity: 0;
+}
+
+#recommend-in {
+  width: 10em;
+  height: 4em;
+  background-color: cornsilk;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+#recommend-in > h5 {
+  justify-content: center;
 }
 
 #recommend {

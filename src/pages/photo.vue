@@ -1,7 +1,7 @@
 <template>
   <div class="photo-wall">
 
-    <img v-for="n in 3" :key="n" src="../imgs/67379620_p0.png" alt="">
+    <img v-for="n in 1" :key="n" src="../imgs/67379620_p0.png" alt="">
   </div>
 
 </template>
